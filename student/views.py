@@ -22,6 +22,10 @@ def home_sbadmin(request):
 def home_json(request):
     return render(request, 'student/home_json.html')
 
+def student_detail(request,pk):
+    student = get_object_or_404(Student, pk=pk)
+    return render(request, 'student/student_detail.html', {'student': student})
+
 # Student JSON list filtering
 class student_list_json(BaseDatatableView):
     order_columns = ['icnum','name','course', 'pk','link']
