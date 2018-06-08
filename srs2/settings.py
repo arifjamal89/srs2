@@ -38,7 +38,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'student',
+    'crispy_forms',
 ]
+
+#CRISPY_TEMPLATE_PACK='uni_form'
+CRISPY_TEMPLATE_PACK='bootstrap3'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
